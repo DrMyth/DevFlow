@@ -1,7 +1,6 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  return [
+module.exports = {
+  async rewrites() {
+    return [
       {
         source: '/projects/:username',
         destination: '/',
@@ -11,6 +10,5 @@ const nextConfig: NextConfig = {
         destination: '/:path*',
       },
     ];
+  },
 };
-
-export default nextConfig;
